@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#f9e8ef">
+  <meta name="description" content="یک دنیای کوچک و صورتی، مخصوص نرگس">
+  <title>برای نرگس، ماهی قشنگم ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main>
+    <section class="screen welcome-screen active" id="welcome">
+      <div class="tiny-label">یک سورپرایز کوچولو برای تو</div>
+      <div class="envelope-wrap" aria-hidden="true">
+        <div class="envelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-heart">♥</div>
+        </div>
+        <span class="sparkle sparkle-a">✦</span><span class="sparkle sparkle-b">✧</span>
+      </div>
+      <p class="eyebrow">سلام، عزیزم</p>
+      <h1>یه دنیای کوچیک<br><span>برای گل من</span></h1>
+      <p class="intro">چند دقیقه از دنیای شلوغت فاصله بگیر؛<br>یه چیز کوچیک برات آماده کردم.</p>
+      <button class="primary-btn" id="enterBtn">بازش کن، گلم <span>♡</span></button>
+      <p class="soft-note">با حوصله جلو برو؛ چندتا غافلگیری منتظرته.</p>
+    </section>
+
+    <section class="screen home-screen" id="home">
+      <div class="topline"><span class="moon-icon">☾</span><span>little things, just for you</span><span class="moon-icon">✧</span></div>
+      <p class="eyebrow">به دنیای کوچیکت خوش اومدی</p>
+      <h2>نرگس، <span>فرشته‌ی قصه‌ی امروز</span></h2>
+      <p class="home-copy">این صفحه قرار نیست چیز بزرگی رو ثابت کنه؛ فقط می‌خواد بگه خیلی دوست دارم</p>
+
+      <div class="counter-card">
+        <div class="counter-number" id="daysCount">۳۰</div>
+        <div><strong>روز از شروع آشنایی‌مون</strong><small>از ۱۰ مهر ۱۴۰۵</small></div>
+        <span class="counter-flower">✿</span>
+      </div>
+
+      <div class="menu-grid">
+        <button class="menu-card" data-open="letter">
+          <span class="menu-icon">✉</span><strong>یه نامه برای تو</strong><small>چند خط از ته دل</small>
+        </button>
+        <button class="menu-card" data-open="quiz">
+          <span class="menu-icon">♡</span><strong>یه بازی کوچولو</strong><small>ببین چقدر حدس می‌زنی</small>
+        </button>
+        <button class="menu-card gift-card" data-open="gift">
+          <span class="menu-icon">🎁</span><strong>جعبه‌ی سورپرایز</strong><small>هنوز بازش نکردی!</small>
+        </button>
+        <button class="menu-card" data-open="night">
+          <span class="menu-icon">☾</span><strong>آسمونِ آرزوها</strong><small>یه لحظه آروم</small>
+        </button>
+      </div>
+
+      <div class="music-row">
+        <div class="music-symbol">♫</div>
+        <div class="music-copy"><strong>یه موسیقی آروم</strong><small id="musicStatus">برای پخش، دکمه رو بزن</small></div>
+        <button id="musicBtn" class="music-btn" aria-label="پخش یا توقف موسیقی">▶</button>
+      </div>
+      <p class="footer-note">با کمی ذوق، کمی شیطنت و کلی فکر برای تو ساخته شده ♡</p>
+    </section>
+
+    <section class="screen detail-screen" id="letter">
+      <button class="back-btn" data-back>← برگشت</button>
+      <div class="section-icon">💌</div>
+      <p class="eyebrow">یه نامه‌ی کوچیک</p>
+      <h2>برای تو، <span>ماهی</span></h2>
+      <article class="letter-paper">
+        <div class="letter-date">۲ اکتبر ۲۰۲۶ · شروع یک آشنایی قشنگ</div>
+        <p>نرگس جان،</p>
+        <p>
+       فکرش رو می‌کردی توی همین مدت کوتاه، یه نفر بتونه این‌قدر راحت وارد فکر و روزمرگی آدم بشه؟ الان تو شدی یکی از قشنگ‌ترین اتفاق‌های روزمره‌م.  </p>
+       <p>
+شاید فقط یک ماهه که همدیگه رو می‌شناسیم و هنوز کلی چیز هست که باید از هم کشف کنیم؛ از سلیقه‌ها و عادت‌های کوچیکمون گرفته تا آرزوهایی که شاید هنوز به زبون نیاوردیم.
+</p>
+<p>
+اما چیزی که الان می‌دونم اینه که آشنایی با تو برام اتفاق قشنگیه. پیام‌هات، حرف‌هامون و حتی اون لحظه‌های ساده‌ای که شاید از نظر بقیه چیز خاصی نباشن، برای من ارزش خودشون رو دارن.
+می‌خوام ادعا کنم که همه‌چی رو تا الان دربارت می‌دونم ولی از آینده خبر ندارم؛ فقط دوست دارم بیشترترتر بشناسمت، بیشترتر باهات بخندم و خاطره‌های قشنگ‌تری کنار هم بسازیم و البته بیشتر تر ببینمت.
+</p>
+<p>
+راستی، یه اعتراف کوچیک هم دارم...
+فکر کنم این «ماهی» بودنِ تو داره کم‌کم کار دستم می‌ده! چون هر بار که اسمت رو می‌بینم، ناخودآگاه لبخند میاد سراغم. :)
+</p>
+<p>
+خلاصه که نرگیس خانیم، خوشحالم که هستی  امیدوارم این فقط شروع کلی اتفاق قشنگ باشه.
+مراقب خودت باش، گلم؛ چون یه نفر اینجا هست که از بودنِ تو خوشحاله و بیشتر از چیزی که فکر می‌کنی به فکرت هست. 💌
+</p>
+        <p class="letter-sign">با مهر و کمی شیطنت،<br><strong>از طرف کسی که از آشنایی با تو خوشحاله ♡</strong></p>
+      </article>
+      <button class="primary-btn next-btn" data-open="quiz">حالا بریم سراغ بازی؟ <span>♡</span></button>
+    </section>
+
+    <section class="screen detail-screen" id="quiz">
+      <button class="back-btn" data-back>← برگشت</button>
+      <div class="section-icon">🐟</div>
+      <p class="eyebrow">وقتِ یه بازی کوچولوئه</p>
+      <h2>چقدر منو <span>می‌شناسی؟</span></h2>
+      <p class="quiz-intro">سه سؤال بامزه؛ جواب درست و غلط نداریم، فقط قراره خوش بگذره.</p>
+      <div class="quiz-card" id="quizCard">
+        <div class="quiz-progress"><span id="quizStep">سؤال ۱ از ۳</span><span class="progress-track"><i id="progressBar"></i></span></div>
+        <h3 id="questionText">فکر می‌کنی من بیشتر کدومم؟</h3>
+        <div class="answers" id="answers"></div>
+        <p class="quiz-feedback" id="quizFeedback" aria-live="polite"></p>
+        <button class="primary-btn hidden" id="nextQuestion">بعدی <span>→</span></button>
+      </div>
+      <p class="soft-note">جواب‌هات فقط برای خنده‌ان؛ نمره‌ای در کار نیست! 😄</p>
+    </section>
+
+    <section class="screen detail-screen gift-screen" id="gift">
+      <button class="back-btn" data-back>← برگشت</button>
+      <p class="eyebrow">این یکی رو با دقت باز کن</p>
+      <h2>یه هدیه برای <span>گلم</span></h2>
+      <p class="gift-instruction">روی جعبه بزن تا سورپرایزت رو ببینی.</p>
+      <button class="gift-box" id="giftBox" aria-label="باز کردن جعبه هدیه">
+        <span class="gift-bow">✧</span><span class="gift-lid"></span><span class="gift-body"></span><span class="gift-ribbon"></span>
+      </button>
+      <div class="gift-message hidden" id="giftMessage">
+        <div class="big-heart">♡</div>
+        <h3>یه قرار کوچولو؟</h3>
+        <p>اگه تو هم دوست داشته باشی (که نیای میام میدزدم میبرمت)، دوست دارم یه روز (البته دست من بود کل امسال) رو یه جای قشنگ بریم، خوراکی های خوشمزه بخریم و بخوریم و کلی حرف بزنیم.
+        البته فرنگیس و کتاب هم یادت نره</p>
+        <p class="gift-last">تا اون روز، امیدوارم امروزت پر از لبخند باشه، ماهی.</p>
+        <button class="outline-btn" id="giftAgain">دوباره جعبه رو ببین</button>
+      </div>
+    </section>
+
+    <section class="screen detail-screen night-screen" id="night">
+      <button class="back-btn" data-back>← برگشت</button>
+      <div class="section-icon">☾</div>
+      <p class="eyebrow">زیر آسمونِ آرزوها</p>
+      <h2>یه آرزو <span>انتخاب کن</span></h2>
+      <p class="night-copy">روی یکی از ستاره‌ها بزن؛ شاید یه آرزوی کوچیک برای خودت داشته باشی.</p>
+      <div class="wish-sky" id="wishSky">
+        <button class="wish-star star-one" data-wish="امیدوارم هیچ‌وقت دردی نکشی.">✦</button>
+        <button class="wish-star star-two" data-wish="امیدوارم همیشه، خوش باشی و کسی دلت رو نشکنه.">✧</button>
+        <button class="wish-star star-three" data-wish="امیدوارم آرزوهات یکی‌یکی راهشون رو به زندگی‌ات پیدا کنن.">✦</button>
+        <button class="wish-star star-four" data-wish="امیدوارم همیشه آدم‌هایی کنارت باشن که قدر مهربونی‌ات رو بدونن (مخصوصا من).">✧</button>
+        <button class="wish-star star-five" data-wish="و آرزوی من؟ اینکه این صفحه یه حال خوش بهت هدیه داده باشه.">✦</button>
+      </div>
+      <div class="wish-result" id="wishResult" aria-live="polite">یکی از ستاره‌ها رو انتخاب کن، فرشته.</div>
+      <button class="outline-btn" data-back>برگشت به دنیای کوچیکم</button>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+  <audio id="backgroundMusic" src="assets/music.mp3" loop preload="none"></audio>
+  <script src="data.js"></script>
+  <script src="extras.js"></script>
+  <script src="script.js"></script>
+<script>if("serviceWorker"in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));</script>
+</body>
+</html>
